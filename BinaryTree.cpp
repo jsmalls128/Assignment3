@@ -52,10 +52,11 @@ bool recursiveDelete(Node*& node, ItemType &key){
       return false;
     }
   }
-  else if(key > node->key)
+  else if(key > node->key){
     if(false == recursiveDelete(node->right, key)){
       return false;
     }
+  }
   else{
     ItemType data;
     Node* tempPtr;

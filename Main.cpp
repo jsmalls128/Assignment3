@@ -62,12 +62,17 @@ int main(int argc, char * argv[]){
       else if(input  == 'l'){                             // Print length
         cout << "List length: " << startList.getLength() << endl;
       }
-      else if(input == 'a'){                              // Additive pairs
-        cout << "Get the additive sum of: ";
+      else if(input == 'r'){                              // Retrieve Item
+        bool found = false;
+        cout << "Item to be retrieved: ";
         std::cin >> numbers;
         ItemType data;
         data.initialize(numbers);
-       // startList.additivePairs(data);
+        startList.retrieve(data,found);
+        if(found)
+          std::cout << "Item found in tree.\n";
+        else
+          std::cout << "Item not in tree.\n";
       }
       else if(input == 'q'){                              // Quit program
         cout << "Quitting program..." << endl;
