@@ -16,7 +16,7 @@ int main(int argc, char * argv[]){
       return EXIT_FAILURE;
     }
     BinaryTree startList = BinaryTree();
-    while(inFile >> numbers){                    // Insert all numbers in file into a DoublyLinkedList
+    while(inFile >> numbers){                    // Insert all numbers in file into a Binary Tree
       ItemType data;
       data.initialize(numbers);
       startList.insert(data); 
@@ -44,17 +44,17 @@ int main(int argc, char * argv[]){
         startList.inOrder();
         cout << "\n";
       }
-      else if(input  == 'n'){                             // Print list
+      else if(input  == 'n'){                             // In-Order Print
         cout << "In-Order:";
         startList.inOrder();
         cout << "\n";
       }
-      else if(input  == 'o'){                             // Print list
+      else if(input  == 'o'){                             // Post-Order Print
         cout << "Post-Order:";
         startList.postOrder();
         cout << "\n";
       }
-      else if(input  == 'p'){                             // Print list
+      else if(input  == 'p'){                             // Pre-Order Print
         cout << "Pre-Order:";
         startList.preOrder();
         cout << "\n";
